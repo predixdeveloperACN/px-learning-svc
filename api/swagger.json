@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Language Service",
-    "description": "for testing blah..."
+    "description": "predix learnings...."
   },
   "paths": {
     "/language": {
