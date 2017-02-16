@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"github.com/gorilla/mux"
 	sw "github.com/predixdeveloperACN/swagger-ui"
+	"os"
 )
 
 var routes *mux.Router
@@ -27,5 +28,11 @@ func SetupServer() {
 }
 
 func StartServer() {
-	http.ListenAndServe(":8080", routes)
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "8080"
+	}
+
+	http.ListenAndServe(":"+port, routes)
 }
