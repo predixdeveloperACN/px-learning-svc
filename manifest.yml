@@ -1,0 +1,7 @@
+---
+applications:
+- name: px-learning-svc-app
+  memory: 1G
+  instance: 1
+  command: /app/bin/px-learning-svc
+  buildpack: https://github.com/cloudfoundry/go-buildpack.git
